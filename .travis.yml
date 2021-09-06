@@ -6,7 +6,7 @@ script:
   - docker build -t mannydesigns/node .
   - docker images mannydesigns/node
 
-befor_deploy:
+before_deploy:
   - docker login -u yuanfengli168 -p 19940326daxia
 
 deploy:
