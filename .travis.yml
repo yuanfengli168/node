@@ -12,7 +12,8 @@ before_deploy:
 deploy:
   # skip_cleanup: true
   provider: script
+  cleanup: true
   script: docker push mannydesings/node
   on:
     branch: master
-  edge: true
+  # edge: true
