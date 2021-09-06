@@ -1,5 +1,4 @@
 # sudo: required
-edge: true
 services:
   - docker
 
@@ -11,6 +10,7 @@ before_deploy:
   - docker login -u yuanfengli168 -p 19940326daxia
 
 deploy:
+  edge: true
   provider: script
   script: docker push mannydesings/node
   on:
