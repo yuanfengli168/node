@@ -4,4 +4,13 @@ services:
 
 script:
   - docker build -t mannydesigns/node .
-  - docker images mannydesigns/node 
+  - docker images mannydesigns/node
+
+befor_deploy:
+  - docker login -u yuanfengli168 -p 19940326daxia
+
+deploy:
+  provider: script
+  script: docker push mannydesings/node
+  on:
+    branch: master
