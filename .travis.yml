@@ -7,13 +7,12 @@ script:
   - docker images mannydesigns/node
 
 before_deploy:
-  - docker login -u yuanfengli168 -p 19940326daxia
+  - docker login -u yuanfengli168 -password-stdin 19940326daxia
 
 deploy:
-  # skip_cleanup: true
   provider: script
   cleanup: true
-  script: docker push mannydesings/node
+  script: docker push mannydesigns/node
   on:
     branch: master
   # edge: true
