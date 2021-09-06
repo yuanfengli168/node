@@ -10,9 +10,9 @@ before_deploy:
   - docker login -u yuanfengli168 -p 19940326daxia
 
 deploy:
-  skip_cleanup: true
-  # edge: true
+  # skip_cleanup: true
   provider: script
   script: docker push mannydesings/node
   on:
     branch: master
+  edge: true
